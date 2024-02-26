@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+  padding: 20px;
+  background-color: rgb(38, 103, 224);
+  color: rgb(42, 40, 42);
+}
+
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(42, 40, 42); /* Dark background color */
+  color: white; /* Light text color */
+  padding: 10px 20px; /* Some padding around the Navbar */
+}
+
+.navbar .logo {
+  width: 100px;
+  padding-left: 12px;
+  border-radius: 50%; /* Ensures the logo is fully round */
+}
+
+.buttons {
+  display: flex;
+  margin-left: auto; /* Pushes the button container to the right */
+  
+  gap: 10px; /* Adds space between buttons */
+}
+
+.navbar .button {
+  padding: 10px 20px; /* Padding inside the buttons */
+  background-color: rgb(38, 103, 224); /* Primary color for buttons */
+  color: rgb(42, 40, 42); /* Text color */
+  border: none; /* Removes the border */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for color and slight scale */
+}
+
+.navbar .button:hover {
+  background-color: rgb(28, 93, 214); /* Slightly darker shade on hover */
+  transform: scale(1.05); /* Slightly increases size on hover */
+}
+
+
+/* main content */
+.about-me {
+  max-width: 100%; /* Sets a max-width for the section */
+  margin: auto; /* Centers the section */
+  padding: 40px; /* Adds padding around the content */
+
+  color: white; /* Dark text for readability */
+  line-height: 1.6; /* Improves line spacing */
+}
+
+.about-me .intro,
+.about-me .summary,
+.about-me .skills,
+.about-me .interests {
+  margin-bottom: 30px; /* Adds space between sections */
+  background-color: rgb(42, 40, 42); 
+  padding: 2%;
+  border-radius: 7px;
+}
+
+.about-me h1,
+.about-me h3,
+.about-me h4 {
+  color: rgb(38, 103, 224); /* Accent color */
+}
+
+.about-me h1 {
+  margin-bottom: 10px; /* Space after the main heading */
+}
+
+.about-me h4 {
+  margin-bottom: 20px; /* Space after the subheading */
+}
+
+.about-me p,
+.about-me div {
+  margin-bottom: 15px; /* Space after paragraphs and divs */
+}
+
+.skills h3,
+.interests h3 {
+  margin-top: 20px; /* Space before subheadings */
+}
+
+/* If you want to use a list for the interests, you can style it like this */
+.interests ul {
+  padding: 0; /* Removes the default padding */
+}
+
+.interests  {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+
+/* Footer */
+.contacts {
+  text-align: center; /* Center the icons */
+  padding: 10px; /* Add some padding */
+  background-color: #333; /* Dark background for footer */
+  color: white; /* Light color text */
+}
+
+.contacts h4 {
+  margin-bottom: 20px; /* Space below the contact heading */
+}
+
+.contacts a {
+  margin: 0 10px; /* Spacing between icons */
+  color: white; /* Icon color */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.contacts a:hover,
+.contacts a:focus {
+  color: rgb(38, 103, 224); /* Change icon color on hover/focus */
+  text-decoration: none; /* Remove text underline on hover/focus */
+}
+
+/* projects */
+.project-section {
+  text-align: center;
+  padding: 40px 0;
+  background-color: rgb(42, 40, 42); /* Background color for the entire section */
+}
+
+.project-section h3 {
+  margin-bottom: 2rem;
+  color: white; /* Dark color for titles */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr )); /* Creates a responsive grid layout */
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.project-card {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.project-card h4 {
+  color: rgb(38, 103, 224); /* Using the accent color */
+  padding: 1rem;
+  background-color: rgba(38, 103, 224, 0.1); /* Light tint of the accent color */
+  margin: 0; /* Reset default margins */
+}
+
+.project-card p {
+  padding: 0 1rem 1rem;
+  color: #333; /* Dark color for text for readability */
+  text-align: left;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card img:hover {
+  transform: scale(1.05); /* Scale the image up slightly on hover */
+}
+
+/* Responsive adjustments can be made with media queries if needed */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr; /* Stack projects on top of each other on small screens */
+  }
+}
+
